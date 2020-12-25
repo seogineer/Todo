@@ -7,11 +7,11 @@ function btnClick(el, id, type){
 		let countRow = nextTable.getElementsByTagName('tr').length;
 		nextTable.insertBefore(item, nextTable.children[countRow]);
 	} else if(type == "DOING"){
-		el.setAttribute('onclick', "btnClick(this,'" + id + "','DONE')");
 		item = el.parentElement.parentElement;
 		let nextTable = document.querySelector('.done-list');
 		let countRow = nextTable.getElementsByTagName('tr').length;
 		nextTable.insertBefore(item, nextTable.children[countRow]);
+		el.parentElement.removeChild(el);
 	}
 	
 
