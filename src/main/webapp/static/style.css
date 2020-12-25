@@ -1,0 +1,206 @@
+@charset "EUC-KR";
+
+/*main.jsp*/
+.header {
+	text-align: right;
+}
+
+.title {
+	font-size: xx-large;
+	margin-top: 80px;
+	width: 300px;
+	transform: rotate(-30deg);
+	text-align: center;
+	color: #34495e;
+	font-weight: bold;
+}
+
+.addbtn {
+	position: absolute;
+	top: 5%;
+	left: 85.1%;
+	
+	text-align: center;
+	background-color: #3498db;
+	width: 200px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 30px;
+	padding-left: 30px;
+	color:white;
+}
+
+.list {
+	float: right;
+	width: 30%;
+}
+
+.theader{
+	background-color: #34495e;
+	text-align: left;
+	width: 33%;
+	height: 80px;
+	font-size: x-large;
+	color: white;
+	padding-left: 20px;
+}
+
+.btn_next {
+	float:right;
+}
+
+th, td{
+	border: 3px solid white;
+}
+
+td {
+	background-color: #81ecec;
+	padding: 10px;
+}
+
+
+/* todoForm.jsp */
+.formContents {
+	width: 600px;
+	margin:0 auto;
+}
+
+.formTodo {
+	width: 600px;
+	height: 45px;
+}
+
+.formName {
+	width: 300px;
+	height: 45px;
+}
+
+h1 {
+	text-align: center;
+}
+
+.rightBtn {
+	float:right;
+}
+
+.prevBtn {
+	width: 90px;
+	height: 32px;
+	text-align: center;
+	border: 1px solid gray;
+	background-color: white;
+}
+
+.submitBtn {
+	width: 90px;
+	height: 32px;
+	background-color: #3498db;
+	color:white;
+	border: 0;
+	outline: 0;
+}
+
+.clearBtn {
+	width: 90px;
+	height: 32px;
+	background-color: #3498db;
+	color:white;
+	border: 0;
+	outline: 0;
+}
+
+.semiTitle {
+	font-size: large;
+}
+
+input::placeholder {
+  	font-size: x-large;
+}
+
+
+/* todo */
+.container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  position: relative;
+}
+
+.board-column {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  margin-left: 25px;
+  box-sizing: border-box;
+  background: #f0f0f0;
+}
+
+.board-column:last-child {
+  margin-right: 25px;
+}
+
+.todo {
+    width: 25%;
+    text-align: center;
+}
+
+.board-column > .board-column-header {
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+  padding: 0 36%;
+  background: #333;
+}
+
+.board-column.todo .board-column-header {
+  background: #4A9FF9;
+}
+.board-column.working .board-column-header {
+  background: #f9944a;
+}
+.board-column.done .board-column-header {
+  background: #2ac06d;
+}
+
+.board-column.backlog .board-column-header {
+  background: red;
+}
+
+.board-column-content {
+  position: relative;
+  border: 10px solid transparent;
+  min-height: 95px;
+}
+
+.board-item {
+  width: 100%;
+  margin: 10px 0;
+}
+
+.board-item-content {
+  position: relative;
+  padding: 20px;
+  background: #fff; /* White */
+  border-radius: 4px;
+  font-size: 17px;
+  cursor: pointer;
+  box-shadow: 0px 1px 3px 0 rgba(0,0,0,0.2);
+}
+
+.next {
+  position: relative;
+  float: right;
+  height: 21px;
+  margin-right: -10px;
+}
+
+.prev {
+  float: left;
+  height: 21px;
+  margin-left: -10px;
+}
+
+.board-column:first-child .action.prev { display: none }
+.board-column:last-child .action.next { display: none }
