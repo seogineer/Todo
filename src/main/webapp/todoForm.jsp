@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%
+	request.setCharacterEncoding("euc-kr");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +11,6 @@
 <link href="static/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-
 <div class="formContents">
 	<h1>할일 등록</h1>
 	<form action="add" onsubmit="return validForm()" method="post">

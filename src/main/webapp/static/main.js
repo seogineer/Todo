@@ -16,15 +16,11 @@ function btnClick(el, id, type){
 	
 
 	var xhr = new XMLHttpRequest();
-	xhr.open("GET", "type?id=" + encodeURI(id) +"&type=" + encodeURI(type));
-	xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
 	xhr.onload = function () {
-	    //var users = JSON.parse(xhr.responseText);
-	    if (xhr.readyState == 4 && xhr.status == "200") {
+	    if (xhr.status == "200") {
 	        console.log("success");
-	    } else {
-	        console.log("fail");
 	    }
 	}
+	xhr.open("GET", "type?id=" + encodeURI(id) +"&type=" + encodeURI(type));
 	xhr.send();
 }
